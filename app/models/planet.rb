@@ -5,7 +5,7 @@ class Planet < ApplicationRecord
   belongs_to :user
   has_many :locations, dependent: :destroy
   validates :name, presence: true
-  validates :type, presence: true, inclusion: { in: TYPEPLANET }
+  validates :planet_type, presence: true, inclusion: { in: TYPEPLANET }
   validates :safety, presence: true, inclusion: { in: SAFETYPLANET }
   validates :prix, presence: true
   validates :description, presence: true
