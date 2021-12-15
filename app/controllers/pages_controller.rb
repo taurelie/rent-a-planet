@@ -3,4 +3,8 @@ class PagesController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
   def home
   end
+
+  def dashboard
+    @user = current_user
+  end
 end
