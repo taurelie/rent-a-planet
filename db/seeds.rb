@@ -35,3 +35,5 @@ puts 'seeds locations'
 Location.create!(planet: dagobah, user: luke, date_arrivee: 2024-25-11, date_depart: 2024-22-12, tarif: 27000)
 Location.create!(planet: tatooine, user: ben, date_arrivee: 2022-01-14, date_depart: 2022-01-29, tarif: 1500)
 Location.create!(planet: ns, user: solo, date_arrivee: 2022-05-16, date_depart: 2022-05-19, tarif: 2100)
+Location.create!(planet: ilum, user: sidious, date_arrivee: 2021-12-24, date_depart: 2021-12-28, tarif: 3200)
+Location.create!(planet: korriban, user: yoda, date_arrivee: 2023-04-13, date_depart: 2023-05-13), tarif: 24000)
