@@ -1,8 +1,10 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.neozone.org/blog/wp-content/uploads/2021/02/matiere-noire-espace-002-780x470.jpg);">
   <div class="container">
     <h1>Rent'a Planet!</h1>
-    <p>Voyagez autrement, le monde n'a plus de limites pour vous.</p>
-    <a class="btn btn-primary" href="#">Login</a>
+    <p>Voyagez autrement, le monde n'a plus de limite pour vous.</p>
+    <%# <%= link_to dashboard_path do %>
+      <%# <a class="btn btn-primary">Login</a>
+    <%end%>
   </div>
 </div>
 
@@ -26,7 +28,9 @@
   <div class="card-trip-infos">
     <div>
       <% @planets.each do |planet| %>
-      <div class="card_planet"><%= image_tag "planetes/#{planet.name}.jpg" %></div>
+        <%= link_to planet_path(planet) do %>
+        <div class="card_planet"><%= image_tag "planetes/#{planet.name}.jpg" %></div>
+        <%end%>
       <h2><%=planet.name%></h2>
       <p><%=planet.description%></p>
       <h2 class="card-trip-pricing"><%=planet.prix%></h2>
