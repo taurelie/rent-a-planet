@@ -17,8 +17,6 @@ solo = User.create!(email: 'solo@hutt.tat', password: 'IamtheBest', encrypted_pa
 
 # Seed Planets
 puts 'seeds planets'
-<<<<<<< HEAD
-=======
 coruscant = Planet.create!(name: 'Coruscant', planet_type: 'Cité', safety: 2, prix: 500, localisation: 'Centre', user: palpatine, description: 'Cité-Planète située au centre de la galaxie et siège du pouvoir de la République avec le Sénat galactique et le Temple Jedi. Multi-raciale, vous trouverez obligatoirement un quartier à votre convenance.')
 naboo = Planet.create!(name: 'Naboo', planet_type: 'Forêt', safety: 3, prix: 400, localisation: 'Bordure Intérieure', user: padme, description: "Planète verdoyante située dans la bordure médiane de la Galaxie. Vous pourrez y admirer ses paysages, sa capitale à l'architecture délicate et réputée et les vestiges de la bataille contre l'armée de la Fédération du Commerce.")
 tatooine = Planet.create!(name: 'Tatooine', planet_type: 'Désert', safety: 1, prix: 100, localisation: 'Bordure Extérieure', user: jabba, description: "Planète la plus accueillante de toute la galaxie. Vosu pouvez tous y venir, on vous trouvera une place. Magnifiques couchers de soleils. Offres d'emploi disponibles")
@@ -40,4 +38,3 @@ Location.create!(planet: tatooine, user: ben, date_arrivee: 20220114, date_depar
 Location.create!(planet: ns, user: solo, date_arrivee: 20220516, date_depart: 20220519, tarif: 2100)
 Location.create!(planet: ilum, user: sidious, date_arrivee: 20211224, date_depart: 20211228, tarif: 3200)
 Location.create!(planet: korriban, user: yoda, date_arrivee: 20230413, date_depart: 20230513, tarif: 24000)
->>>>>>> 50105aac73ae772616996b3663cbd761ea15efa5
