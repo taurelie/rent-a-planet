@@ -37,3 +37,9 @@
   top: -20px;
   width: 40px;
 }
+
+.card_planet > img {
+  height: 100px;
+  width: 50%;
+  object-fit: cover;
+}
