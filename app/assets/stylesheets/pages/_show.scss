@@ -1,0 +1,47 @@
+.title {
+  margin: 0 auto;
+  width: 100px;
+}
+.informations_planetes {
+  margin: 10px;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container_infos {
+  width: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  place-content: space-around start;
+}
+
+.planet {
+  margin-right: 20px;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.description {
+  background-color: white;
+  text-align: justify;
+  padding: 20px;
+}
+
+.donnees {
+  padding-inline-start: 5px;
+}
+
+.proprietaire {
+  max-width: 400px;
+  vertical-align: middle;
+}
+
+#container_calendar_g {
+  margin-right: 50px;
+}
+
+#container_calendar_d {
+  margin-left: 50px;
+}
