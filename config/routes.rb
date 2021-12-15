@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :planets
 
   get 'planets/:id', to: 'planets#show'
+
+  get '/dashboard', to: 'pages#dashboard'
+
 end

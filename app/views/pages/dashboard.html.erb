@@ -1,0 +1,38 @@
+<h3>Mon compte</h3>
+
+<div class="contenaire">
+  <div class="card_user">
+    <div class="user_image">
+    </div>
+    <div class="user_bio">
+      <p>Nom : <%= @user.first_name %></p>
+      <p>Prénom : <%= @user.last_name %></p>
+      <p>Email : <%= @user.email%></p>
+    </div>
+    <div class="user_infos">
+      <h5>Ma biographie</h5>
+      <p><%= @user.biographie %></p>
+    </div>
+  </div>
+
+  <div class="locations">
+    <div class="planet_owner">
+      <div>
+       <p>Mes planètes</p>
+      </div>
+    </div>
+    <div class="planet_user">
+      <div>
+        <p>Mes réservations</p>
+        <ul>
+          <li>Coruscant</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class='btn btn-info'><%= link_to "Accueil", root_path %></div>
+
+<%= console %>
