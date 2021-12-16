@@ -18,14 +18,16 @@
   <div class="locations">
     <div class="planet_owner">
       <div>
-       <p>Mes planètes</p>
+       <div>Mes planètes</div>
+       <div><%=@user.planets%></div>
       </div>
     </div>
+    <div class='btn btn-flat' id='btn-creer'><%= link_to "Créer planète", "../planets/new" %></div>
     <div class="planet_user">
       <div>
-        <p>Mes réservations</p>
+        <div>Mes réservations</div>
         <ul>
-          <li>Coruscant</li>
+          <li><%=@user.planets%></li>
         </ul>
       </div>
     </div>
@@ -33,4 +35,6 @@
 </div>
 
 
-<div class='btn btn-info'><%= link_to "Accueil", root_path %></div>
+<div class='btn btn-flat'><%= link_to "Accueil", root_path %></div>
+
+<% console %>
