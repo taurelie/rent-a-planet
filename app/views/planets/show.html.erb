@@ -1,24 +1,22 @@
-<h1 class="title">Coruscant</h1>
+<h1 class="title"><%=@planet.name%></h1>
 
 <div class="informations_planetes">
   <div class="container_infos">
     <h3>Localisation : </h3>
-    <h3 class="donnees">Centre Galaxie</h3>
+    <h3 class="donnees"><%=@planet.localisation%></h3>
   </div>
   <div class="container_infos">
     <h3>Type : </h3>
-    <h3 class="donnees">Cité</h3>
+    <h3 class="donnees"><%=@planet.planet_type%></h3>
   </div>
   <div class="container_infos">
     <h3>Niveau de sécurité : </h3>
-    <h3 class="donnees">2</h3>
+    <h3 class="donnees"><%=@planet.safety%></h3>
   </div>
 </div>
 <div class="informations_planetes">
-  <img class="planet" id="planet_show" src="https://zupimages.net/up/15/53/4ipd.png">
-  <div class="description">
-  Cité-Planète située au centre de la galaxie et siège du pouvoir de la République avec le Sénat galactique et le Temple Jedi. Multi-raciale, vous trouverez obligatoirement un quartier à votre convenance.
-  </div>
+  <img class="planet" id="planet_show" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Coruscant.jpg/280px-Coruscant.jpg">
+  <div class="description"><%=@planet.description%></div>
 </div>
 
 <div class="informations_planetes">
@@ -26,137 +24,27 @@
     <img class="avatar_proprio" src="https://i.skyrock.net/9056/70029056/pics/2792109335_1.jpg">
     <div class="container_infos">
       <h3>Propriétaire : </h3>
-      <h3 class="donnees">Seev Palpatine</h3>
+      <h3 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h3>
     </div>
-    <div class="biography">
-    Ancien sénateur de Naboo, élu démocratiquement comme Chancelier Suprême de la République Galactique.
-    </div>
+    <div class="biography"><%=@planet.user['biographie']%></div>
   </div>
   <div class="container_infos">
     <div id="container_calendar_g">
       <h3>Date d'arrivée</h3>
-      <div>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
-        <div class="softcard">
-          <div class="calendar-bar">
-            <button class="prev soft-btn"><i class="fas fa-chevron-left"></i></button>
-            <div class="current-month"></div>
-            <button class="next soft-btn"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="calendar">
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="calendar-days"></div>
-          </div>
-          <div class="goto-buttons">
-            <button type="button" class="btn prev-year">Mois précédent</button>
-            <button type="button" class="btn today">Aujourd'hui</button>
-            <button type="button" class="btn next-year">Mois suivant</button>
-          </div>
-        </div>
-      </div>
+
     </div>
     <div id="container_calendar_d">
       <h3>Date de départ</h3>
-      <div>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
-        <div class="softcard">
-          <div class="calendar-bar">
-            <button class="prev soft-btn"><i class="fas fa-chevron-left"></i></button>
-            <div class="current-month"></div>
-            <button class="next soft-btn"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="calendar">
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="weekdays-name">
-              <div class="days-name">Lu</div>
-              <div class="days-name">Ma</div>
-              <div class="days-name">Me</div>
-              <div class="days-name">Je</div>
-              <div class="days-name">Ve</div>
-              <div class="days-name">Sa</div>
-              <div class="days-name">Di</div>
-            </div>
-            <div class="calendar-days"></div>
-          </div>
-          <div class="goto-buttons">
-            <button type="button" class="btn prev-year">Mois précédent</button>
-            <button type="button" class="btn today">Aujourd'hui</button>
-            <button type="button" class="btn next-year">Mois suivant</button>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 <div class="container_infos">
   <h3>Prix : </h3>
-  <h3 class="donnees">500 CR</h3>
+  <h3 class="donnees"><%=@planet.prix%> CR</h3>
 </div>
 </div>
-
-<% console %>
 
 <div class="bottom_view">
   <%= link_to "Accueil", "../..", class: "btn btn-flat" %>
-<!-- <%= link_to "Book now", "#", class: "btn btn-flat" %> -->
+<!-- <%= link_to "Réserver", "#", class: "btn btn-flat" %> -->
 </div>
