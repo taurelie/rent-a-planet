@@ -10,4 +10,5 @@ class Planet < ApplicationRecord
   validates :prix, presence: true
   validates :description, presence: true
   validates :localisation, presence: true, inclusion: { in: LOCALISATIONPLANET }
+  has_one_attached :photo
 end
