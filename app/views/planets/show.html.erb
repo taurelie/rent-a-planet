@@ -20,7 +20,7 @@
 </div>
 
 <div class="informations_planetes">
-  <div class="proprietaire">
+  <div class="proprietaire" id="infos_proprio">
     <img class="avatar_proprio" src="https://i.skyrock.net/9056/70029056/pics/2792109335_1.jpg">
     <div class="container_infos">
       <h3>Propriétaire : </h3>
@@ -28,23 +28,14 @@
     </div>
     <div class="biography"><%=@planet.user['biographie']%></div>
   </div>
+
   <div class="container_infos">
-    <div id="container_calendar_g">
-      <h3>Date d'arrivée</h3>
-
-    </div>
-    <div id="container_calendar_d">
-      <h3>Date de départ</h3>
-
-    </div>
+    <h3>Prix : </h3>
+    <h3 class="donnees"><%=@planet.prix%> CR</h3>
   </div>
-<div class="container_infos">
-  <h3>Prix : </h3>
-  <h3 class="donnees"><%=@planet.prix%> CR</h3>
-</div>
 </div>
 
 <div class="bottom_view">
   <%= link_to "Accueil", "../..", class: "btn btn-flat" %>
-<!-- <%= link_to "Réserver", "#", class: "btn btn-flat" %> -->
+  <%= link_to "Réserver", "#", class: "btn btn-flat" %>
 </div>
