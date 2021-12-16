@@ -21,11 +21,14 @@
        <p>Mes planètes</p>
        <% @current_user.planets.each do |planet|%>
         <li>
-          <%= planet.name %>
+          <%= planet.name %><%= link_to "supprimer", planet_path(planet), method: :delete %>
+        </li>
+        <li>
+          <%= link_to "edit", edit_planet_path(planet) %>
         </li>
         <% end %>
       </div>
-      <div class='btn btn-info'><%= link_to "ajouter", "/planets/new" %></div>
+      <div class='btn btn-info'><%= link_to "ajouter", new_planet_path %></div>
     </div>
     <div class="planet_user">
       <div>
