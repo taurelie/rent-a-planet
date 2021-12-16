@@ -24,11 +24,9 @@
     <img class="avatar_proprio" src="https://i.skyrock.net/9056/70029056/pics/2792109335_1.jpg">
     <div class="container_infos">
       <h3>Propriétaire : </h3>
-      <h3 class="donnees">Seev Palpatine</h3>
+      <h3 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h3>
     </div>
-    <div class="biography">
-    Ancien sénateur de Naboo, élu démocratiquement comme Chancelier Suprême de la République Galactique.
-    </div>
+    <div class="biography"><%=@planet.user['biographie']%></div>
   </div>
   <div class="container_infos">
     <div id="container_calendar_g">
@@ -156,3 +154,5 @@
   <%= link_to "Accueil", "../..", class: "btn btn-flat" %>
 <!-- <%= link_to "Book now", "#", class: "btn btn-flat" %> -->
 </div>
+
+<% console %>
