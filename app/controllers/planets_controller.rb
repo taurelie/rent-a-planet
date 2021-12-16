@@ -24,15 +24,11 @@ class PlanetsController < ApplicationController
   # POST /planets or /planets.json
   def create
     @planet = Planet.new(planet_params)
-
-    respond_to do |format|
-      if @planet.save
-        format.html { redirect_to @planet, notice: "Planet was successfully created." }
-        format.json { render :show, status: :created, location: @planet }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @planet.errors, status: :unprocessable_entity }
-      end
+    @planet.user = current_user
+    if @planet.save
+      redirect_to dashboard_path(@planet)
+    else
+      render :new
     end
   end
 
@@ -67,6 +63,6 @@ class PlanetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def planet_params
-      params.require(:planet).permit(:name, :type, :safety, :description, :prix, :localisation)
+      params.require(:planet).permit( :name, :safety, :description, :planet_type, :prix, :localisation)
     end
 end
