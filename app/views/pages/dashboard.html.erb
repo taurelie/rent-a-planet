@@ -19,24 +19,18 @@
     <div class="planet_owner">
       <div>
        <div>Mes planètes</div>
-       <div>
-          <% @current_user.planets.each do |planet|%>
-            <div class="container_infos">
-              <div class="container_links">
-                <%= link_to planet_path(planet) do %>
-                  <%= planet.name %>
-                <%end%>
-              </div>
-              <div class="container_links">
-                <%= link_to "supprimer", planet_path(planet) %>
-              </div>
-              <div class="container_links">
-                Update
-              </div>
-            </div>
-          <% end %>
-        </div>
+=======
+       <% @current_user.planets.each do |planet|%>
+        <li>
+          <%= planet.name %><%= link_to "supprimer", planet_path(planet), method: :delete %>
+        </li>
+        <li>
+          <%= link_to "edit", edit_planet_path(planet) %>
+        </li>
+        <% end %>
+>>>>>>> master
       </div>
+      <div class='btn btn-info'><%= link_to "ajouter", new_planet_path %></div>
     </div>
     <div class='btn btn-flat' id='btn-creer'><%= link_to "Créer planète", "../planets/new" %></div>
     <div class="planet_user">
