@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
   end
+
+  def spaceport
+    @user = current_user
+  end
 end
