@@ -19,6 +19,11 @@
     <div class="planet_owner">
       <div>
        <p>Mes planètes</p>
+       <% @current_user.planets.each do |planet|%>
+        <li>
+          <%= planet.name %>
+        </li>
+        <% end %>
       </div>
       <div class='btn btn-info'><%= link_to "ajouter", "/planets/new" %></div>
     </div>
