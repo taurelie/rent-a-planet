@@ -11,7 +11,7 @@ puts 'seeds user'
 palpatine = User.create!(email: 's.palpatine@senate.org', password: 'IamDS!', password_confirmation: 'IamDS!', first_name: 'Seev', last_name: 'Palpatine', biographie: 'Ancien sénateur de Naboo, élu démocratiquement comme Chancelier Suprême de la République Galactique.')
 jabba = User.create!(email: 'jabba@hutt.tat', password: 'Irule!', password_confirmation: 'Irule!', first_name: 'Jabba Desilijic', last_name: 'Tiure', biographie: 'Maître incontesté et incontestable de Tatooine')
 padme = User.create!(email: 'amidala@reine.nb', password: 'Peace:)', password_confirmation: 'Peace:)', first_name: 'Padme', last_name: 'Amidala', biographie: 'Ancienne Reine de Naboo désormais sénatrice de cette planète')
-yoda = User.create!(email: 'yoda@jedi.org', password: 'May4thbewithyou', password_confirmation: 'May4thbewithyou', biographie: 'Maître Jedi')
+yoda = User.create!(email: 'yoda@jedi.org', password: 'May4thbewithyou', password_confirmation: 'May4thbewithyou', first_name: 'Minch', last_name: 'Yoda', biographie: 'Maître Jedi')
 sidious = User.create!(email: 'first_sith@darkside.org', password: 'IamCSP', password_confirmation: 'IamCSP', first_name: 'Darth', last_name: 'Sidious')
 luke = User.create!(email: 'l.skywalker@farmer.tat', password: 'IhavetheForce', password_confirmation: 'IhavetheForce', first_name: 'Luke', last_name: 'Skywalker')
 ben = User.create!(email: 'kenobi@jedi.org', password: 'HelloThere', password_confirmation: 'HelloThere', first_name: 'Obi-Wan', last_name: 'Kenobi')
