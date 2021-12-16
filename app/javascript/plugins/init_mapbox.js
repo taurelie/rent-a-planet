@@ -11,11 +11,11 @@ const initMapbox = () => {
       style: 'mapbox://styles/mapbox/streets-v10'
     });
 
-    new mapboxgl.Marker()
-      .setLngLat([32.99038215364821, -106.97543468269595])
+    const marker = new mapboxgl.Marker()
+      .setLngLat([32.99, -106.97])
       .addTo(map);
 
-    fitMapToMarkers(map, markers);
+    fitMapToMarkers(map, marker);
   }
     const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();
