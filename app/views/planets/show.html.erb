@@ -1,0 +1,50 @@
+<h1 class="title"><%=@planet.name%></h1>
+
+<div class="informations_planetes">
+  <div class="container_infos">
+    <h3>Localisation : </h3>
+    <h3 class="donnees"><%=@planet.localisation%></h3>
+  </div>
+  <div class="container_infos">
+    <h3>Type : </h3>
+    <h3 class="donnees"><%=@planet.planet_type%></h3>
+  </div>
+  <div class="container_infos">
+    <h3>Niveau de sécurité : </h3>
+    <h3 class="donnees"><%=@planet.safety%></h3>
+  </div>
+</div>
+<div class="informations_planetes">
+  <img class="planet" id="planet_show" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Coruscant.jpg/280px-Coruscant.jpg">
+  <div class="description"><%=@planet.description%></div>
+</div>
+
+<div class="informations_planetes">
+  <div class="proprietaire">
+    <img class="avatar_proprio" src="https://i.skyrock.net/9056/70029056/pics/2792109335_1.jpg">
+    <div class="container_infos">
+      <h3>Propriétaire : </h3>
+      <h3 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h3>
+    </div>
+    <div class="biography"><%=@planet.user['biographie']%></div>
+  </div>
+  <div class="container_infos">
+    <div id="container_calendar_g">
+      <h3>Date d'arrivée</h3>
+
+    </div>
+    <div id="container_calendar_d">
+      <h3>Date de départ</h3>
+
+    </div>
+  </div>
+<div class="container_infos">
+  <h3>Prix : </h3>
+  <h3 class="donnees"><%=@planet.prix%> CR</h3>
+</div>
+</div>
+
+<div class="bottom_view">
+  <%= link_to "Accueil", "../..", class: "btn btn-flat" %>
+<!-- <%= link_to "Réserver", "#", class: "btn btn-flat" %> -->
+</div>

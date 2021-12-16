@@ -1,1 +1,44 @@
-<h1> hello from index </h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.neozone.org/blog/wp-content/uploads/2021/02/matiere-noire-espace-002-780x470.jpg);">
+  <div class="container">
+    <h1>Rent'a Planet!</h1>
+    <p>Voyagez autrement, le monde n'a plus de limite pour vous.</p>
+    <%= link_to dashboard_path, :class => "btn btn-primary" do %>
+      Login
+    <%end%>
+  </div>
+</div>
+
+<%# <div class="container">
+  <div class="card-trip">
+  <%= image_tag "planetes/Coruscant.jpg" %>
+  <%# <div class="card-trip-infos">
+    <div>
+      <h2>Coruscant</h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-trip-pricing">£99.99</h2>
+    <img src=" " class="card-trip-user avatar-bordered" />
+  </div>
+</div> %>
+
+
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <div class="card-trip">
+  <div class="card-trip-infos">
+    <div>
+      <% @planets.each do |planet| %>
+        <%= link_to planet_path(planet) do %>
+        <div class="card_planet"><%= image_tag "planetes/#{planet.name}.jpg" %></div>
+        <%end%>
+      <h2><%=planet.name%></h2>
+      <p><%=planet.description%></p>
+      <h2 class="card-trip-pricing"><%=planet.prix%></h2>
+      <%end%>
+    </div>
+  </div>
+
+
+<%# <%= link_to planet_path(planet), class:'text-decoration-none' do %>
+
+<%# <% console %>
