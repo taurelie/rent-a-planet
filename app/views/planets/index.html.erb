@@ -29,7 +29,8 @@
     <div>
       <% @planets.each do |planet| %>
         <%= link_to planet_path(planet) do %>
-        <div class="card_planet"><%= image_tag "planetes/#{planet.name}.jpg" %></div>
+        <%# <div class="card_planet"><%= image_tag "planetes/#{planet.name}.jpg" %>
+        <div class="card_planet"><%= cl_image_tag planet.photo.key, height: 300, width: 400, crop: :fill %></div>
         <%end%>
       <h2><%=planet.name%></h2>
       <p><%=planet.description%></p>
@@ -41,4 +42,7 @@
 
 <%# <%= link_to planet_path(planet), class:'text-decoration-none' do %>
 
-<%# <% console %>
+
+
+<%= cl_image_tag("https://res.cloudinary.com/dafgezb33/image/upload/v1639652093/RENT%20A%20PLANET/Rakata_Prime_vmdjsb.jpg",
+     :background=>"auto", :gravity=>"auto", :height=>400, :width=>80, :crop=>"fill_pad") %>
