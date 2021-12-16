@@ -19,12 +19,23 @@
     <div class="planet_owner">
       <div>
        <div>Mes planètes</div>
-       <% @current_user.planets.each do |planet|%>
-        <div>
-          <%= link_to planet_path(planet) do %>
-            <%= planet.name %>
-          <%end%>
-        <% end %>
+       <div>
+          <% @current_user.planets.each do |planet|%>
+            <div class="container_infos">
+              <div class="container_links">
+                <%= link_to planet_path(planet) do %>
+                  <%= planet.name %>
+                <%end%>
+              </div>
+              <div class="container_links">
+                <%= link_to "supprimer", planet_path(planet) %>
+              </div>
+              <div class="container_links">
+                Update
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class='btn btn-flat' id='btn-creer'><%= link_to "Créer planète", "../planets/new" %></div>
@@ -32,9 +43,11 @@
       <div>
         <div>Mes réservations</div>
         <% @current_user.locations.each do |location|%>
-        <div>
-          <%= location.planet['name'] %>
-        </div>
+          <div class="container_infos">
+            <div class="container_links">
+              <%= location.planet['name'] %>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
