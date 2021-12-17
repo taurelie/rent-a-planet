@@ -15,7 +15,6 @@
     <div>
       <% @planets.each do |planet| %>
         <%= link_to planet_path(planet) do %>
-        <%# <div class="card_planet"><%= image_tag "planetes/#{planet.name}.jpg" %>
         <div class="card_planet"><%= cl_image_tag planet.photo.key, height: 300, width: 400, crop: :fill %></div>
         <%end%>
       <h2><%=planet.name%></h2>
@@ -24,6 +23,3 @@
       <%end%>
     </div>
   </div>
-
-
-<%# <%= link_to planet_path(planet), class:'text-decoration-none' do %>
