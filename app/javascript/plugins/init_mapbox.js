@@ -8,14 +8,17 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/lola521/ckxaac7klbqxl14o4fjjvcn86'
     });
 
-    const marker = new mapboxgl.Marker()
-      .setLngLat([32.99, -106.97])
-      .addTo(map);
+    const markers = JSON.parse(mapElement.dataset.markers);
+    markers.forEach((marker) => {
+      new mapboxgl.Marker()
+        .setLngLat([marker.lng, marker.lat])
+        .addTo(map);
+    });
 
-    fitMapToMarkers(map, marker);
+    fitMapToMarkers(map, markers);
   }
     const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();
