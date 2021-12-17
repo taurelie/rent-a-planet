@@ -7,5 +7,6 @@
   <%= f.input :description %>
   <%= f.input :prix %>
   <%= f.input :localisation, collection: Planet::LOCALISATIONPLANET %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
 <% end %>
