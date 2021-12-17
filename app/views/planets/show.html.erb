@@ -24,12 +24,14 @@
     </div>
   </div>
   <div class="proprietaire" id="infos_proprio">
-    <div class="avatar_proprio"><%=cl_image_tag @planet.user.photo.key, height: 200, width: 180, :crop => :fill, :radius=>"max", :gravity=>"faces" %></div>
     <div class="container_infos" id="container_proprio">
       <h4>Propriétaire : </h4>
       <h4 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h4>
     </div>
-    <div class="biography"><%=@planet.user['biographie']%></div>
+    <div class="container_infos">
+      <div class="avatar_proprio"><%=cl_image_tag @planet.user.photo.key, height: 200, width: 180, :crop => :fill, :radius=>"max", :gravity=>"faces" %></div>
+      <div class="biography"><%=@planet.user['biographie']%></div>
+    </div>
   </div>
 </div>
 
