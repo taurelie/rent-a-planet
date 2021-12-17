@@ -6,16 +6,43 @@ Location.destroy_all
 
 require "open-uri"
 
+# Seed Images Users
+puts 'seeds img user'
+img_palpatine = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740248/RENT%20A%20PLANET/palpatine_qqukj4.jpg')
+img_jabba = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740249/RENT%20A%20PLANET/jabba_hhuta1.png')
+img_padme = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740248/RENT%20A%20PLANET/padme_hztsbf.jpg')
+img_yoda = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740248/RENT%20A%20PLANET/yoda_qzauzo.jpg')
+img_sidious = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740249/RENT%20A%20PLANET/sidious_c5fyzk.jpg')
+img_luke = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740249/RENT%20A%20PLANET/luke_mgi7qa.jpg')
+img_ben = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740249/RENT%20A%20PLANET/ben_jqo49g.jpg')
+img_solo = URI.open('https://res.cloudinary.com/dafgezb33/image/upload/v1639740248/RENT%20A%20PLANET/solo_yfzijf.jpg')
+
 # Seed Users
 puts 'seeds user'
 palpatine = User.create!(email: 's.palpatine@senate.org', password: 'IamDS!', password_confirmation: 'IamDS!', first_name: 'Seev', last_name: 'Palpatine', biographie: 'Ancien sénateur de Naboo, élu démocratiquement comme Chancelier Suprême de la République Galactique.')
+palpatine.photo.attach(io: img_palpatine, filename: 'palpatine_qqukj4.jpg', content_type: 'image/jpg')
+
 jabba = User.create!(email: 'jabba@hutt.tat', password: 'Irule!', password_confirmation: 'Irule!', first_name: 'Jabba Desilijic', last_name: 'Tiure', biographie: 'Maître incontesté et incontestable de Tatooine')
+jabba.photo.attach(io: img_jabba, filename: 'jabba_hhuta1.png', content_type: 'image/png')
+
 padme = User.create!(email: 'amidala@reine.nb', password: 'Peace:)', password_confirmation: 'Peace:)', first_name: 'Padme', last_name: 'Amidala', biographie: 'Ancienne Reine de Naboo désormais sénatrice de cette planète')
+padme.photo.attach(io: img_padme, filename: 'padme_hztsbf.jpg', content_type: 'image/jpg')
+
 yoda = User.create!(email: 'yoda@jedi.org', password: 'May4thbewithyou', password_confirmation: 'May4thbewithyou', first_name: 'Minch', last_name: 'Yoda', biographie: 'Maître Jedi')
+yoda.photo.attach(io: img_yoda, filename: 'yoda_qzauzo.jpg', content_type: 'image/jpg')
+
 sidious = User.create!(email: 'first_sith@darkside.org', password: 'IamCSP', password_confirmation: 'IamCSP', first_name: 'Darth', last_name: 'Sidious')
+sidious.photo.attach(io: img_sidious, filename: 'sidious_c5fyzk.jpg', content_type: 'image/jpg')
+
 luke = User.create!(email: 'l.skywalker@farmer.tat', password: 'IhavetheForce', password_confirmation: 'IhavetheForce', first_name: 'Luke', last_name: 'Skywalker')
+luke.photo.attach(io: img_luke, filename: 'luke_mgi7qa.jpg', content_type: 'image/jpg')
+
 ben = User.create!(email: 'kenobi@jedi.org', password: 'HelloThere', password_confirmation: 'HelloThere', first_name: 'Obi-Wan', last_name: 'Kenobi')
+ben.photo.attach(io: img_ben, filename: 'ben_jqo49g.jpg', content_type: 'image/jpg')
+
 solo = User.create!(email: 'solo@hutt.tat', password: 'IamtheBest', password_confirmation:'IamtheBest', first_name: 'Han', last_name: 'Solo')
+solo.photo.attach(io: img_solo, filename: 'solo_yfzijf.jpg', content_type: 'image/jpg')
+
 
 # Seed Images Planets
 puts 'seeds img planets'
