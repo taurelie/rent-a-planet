@@ -21,7 +21,7 @@
 
 <div class="informations_planetes">
   <div class="proprietaire" id="infos_proprio">
-    <img class="avatar_proprio" src="https://i.skyrock.net/9056/70029056/pics/2792109335_1.jpg">
+    <div class="avatar_proprio"><%=cl_image_tag @planet.user.photo.key%></div>
     <div class="container_infos">
       <h3>Propriétaire : </h3>
       <h3 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h3>

@@ -4,4 +4,5 @@ class Location < ApplicationRecord
   validates :date_arrivee, presence: true
   validates :date_depart, presence: true
   validates :tarif, presence: true
+  has_one_attached :photo
 end
