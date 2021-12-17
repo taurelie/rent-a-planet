@@ -5,39 +5,61 @@
     <div class="user_image">
     </div>
     <div class="user_bio">
-      <p>Nom : <%= @user.first_name %></p>
-      <p>Prénom : <%= @user.last_name %></p>
-      <p>Email : <%= @user.email%></p>
+      <div class="container_infos">
+        <div>Nom :</div>
+        <div class="donnees"><%= @user.first_name %></div>
+      </div>
+      <div class="container_infos">
+        <div>Prénom :</div>
+        <div class="donnees"><%= @user.last_name %></div>
+      </div>
+      <div class="container_infos">
+        <div>Email :</div>
+        <div class="donnees"><%= @user.email%></div>
+      </div>
     </div>
     <div class="user_infos">
       <h5>Ma biographie</h5>
-      <p><%= @user.biographie %></p>
+      <div class="container_infos"><%= @user.biographie %></div>
+    </div>
+<!--boutton editer -->
+    <div>
     </div>
   </div>
 
   <div class="locations">
     <div class="planet_owner">
       <div>
-       <div>Mes planètes</div>
-       <% @current_user.planets.each do |planet|%>
-        <li>
-          <%= planet.name %><%= link_to "supprimer", planet_path(planet), method: :delete %>
-        </li>
-        <li>
-          <%= link_to "edit", edit_planet_path(planet) %>
-        </li>
-        <% end %>
+       <h3>Mes planètes</h3>
+        <div>
+          <% @current_user.planets.each do |planet|%>
+            <div class="container_infos">
+              <div class="container_links">
+                <%= link_to planet_path(planet) do %>
+                  <%= planet.name %>
+                <%end%>
+              </div>
+              <div class="container_links">
+                <%= link_to "Editer", edit_planet_path(planet) %>
+              </div>
+              <div class="container_links">
+                <%= link_to "Supprimer", planet_path(planet), method: :delete %>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <div class='btn btn-info'><%= link_to "ajouter", new_planet_path %></div>
     </div>
-    <div class='btn btn-flat' id='btn-creer'><%= link_to "Créer planète", "../planets/new" %></div>
+    <div class='btn btn-flat' id='btn-creer'><%= link_to "Créer planète", new_planet_path %></div>
     <div class="planet_user">
       <div>
         <div>Mes réservations</div>
         <% @current_user.locations.each do |location|%>
-        <div>
-          <%= location.planet['name'] %>
-        </div>
+          <div class="container_infos">
+            <div class="container_links">
+              <%= location.planet['name'] %>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
