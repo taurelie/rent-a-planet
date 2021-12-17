@@ -15,13 +15,13 @@
   </div>
 </div>
 <div class="informations_planetes">
-  <div class="planet" id="planet_show"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Coruscant.jpg" alt=""></div>
+  <div class="planet" id="planet_show"><%=cl_image_tag @planet.photo.key%></div>
   <div class="description"><%=@planet.description%></div>
 </div>
 
 <div class="informations_planetes">
   <div class="proprietaire" id="infos_proprio">
-    <img class="avatar_proprio" src="https://i.skyrock.net/9056/70029056/pics/2792109335_1.jpg">
+    <div class="avatar_proprio"><%=cl_image_tag @planet.user.photo.key%></div>
     <div class="container_infos">
       <h3>Propriétaire : </h3>
       <h3 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h3>
@@ -36,6 +36,6 @@
 </div>
 
 <div class="bottom_view">
-  <%= link_to "Home", planets_path, class: "btn btn-flat" %>
+  <%= link_to "Home", root_path, class: "btn btn-flat" %>
   <%= link_to "Spaceport", spaceport_path, class: "btn btn-flat" %>
 </div>
