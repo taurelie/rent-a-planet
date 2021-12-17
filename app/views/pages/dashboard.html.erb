@@ -1,8 +1,10 @@
-<h3>Mon compte</h3>
 
-<div class="contenaire">
+<h3 style=text-align:center>Mon compte</h3>
+
+<div class="contenaire" class='container_infos'>
   <div class="card_user">
     <div class="user_image">
+      <div class="container"><%= cl_image_tag @user.photo.key, height: 200, width: 180, :crop => :fill, :radius=>"max", :gravity=>"faces" %></div>
     </div>
     <div class="user_bio">
       <div class="container_infos">
@@ -21,14 +23,10 @@
     <div class="user_infos">
       <h5>Ma biographie</h5>
       <div class="container_infos"><%= @user.biographie %></div>
-      <div class="container"><%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill %></div>
-    </div>
-<!--boutton editer -->
-    <div>
     </div>
   </div>
 
-  <div class="locations">
+  <div class="dasboard" class='container_infos'>
     <div class="planet_owner">
       <div>
        <h3>Mes planètes</h3>
@@ -37,32 +35,36 @@
             <div class="container_infos">
               <div class="container_links">
                 <%= link_to planet_path(planet) do %>
-                  <%= planet.name %>
+                  <div><%=cl_image_tag planet.photo.key, height: 40, weight:40, :crop => :fill %></div>
+                  <div id="planet_name_dash"><%= planet.name %></div>
                 <%end%>
               </div>
-              <div class="container_links">
+              <div class="edit_suppr">
+                <div class="container_links">
                 <%= link_to "Editer", edit_planet_path(planet) %>
-              </div>
-              <div class="container_links">
+                </div>
+                <div class="container_links">
                 <%= link_to "Supprimer", planet_path(planet), method: :delete %>
+                </div>
               </div>
             </div>
           <% end %>
         </div>
       </div>
-    </div>
-    <div class='btn btn-flat' id='btn-creer'><%= link_to "Créer planète", new_planet_path %></div>
-    <div class="planet_user">
+      <div class="planet_user" class="dasboard">
       <div>
-        <div>Mes réservations</div>
+        <h3>Mes réservations</h3>
         <% @current_user.locations.each do |location|%>
           <div class="container_infos">
             <div class="container_links">
+              <div class="container_links"><%=cl_image_tag location.planet.photo.key, height: 40, weight:40, :crop => :fill %></div>
               <%= location.planet['name'] %>
             </div>
           </div>
         <% end %>
       </div>
     </div>
+    </div>
+    <div class='btn btn-flat' id='btn-creer'><%= link_to "Créer planète", new_planet_path %></div>
   </div>
 </div>
