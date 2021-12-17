@@ -10,5 +10,6 @@ class PagesController < ApplicationController
 
   def spaceport
     @user = current_user
+    @coordinates = [{lat:32.99032815999407, lng:-106.97545614030761}]
   end
 end
