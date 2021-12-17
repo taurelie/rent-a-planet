@@ -15,25 +15,24 @@
   </div>
 </div>
 <div class="informations_planetes">
-  <div class="planet" id="planet_show"><%=cl_image_tag @planet.photo.key%></div>
-  <div class="description"><%=@planet.description%></div>
-</div>
-
-<div class="informations_planetes">
+  <div class="planet" id="planet_show"><%=cl_image_tag @planet.photo.key, height: 400, weight:400, :crop => :fill %></div>
+  <div class="description">
+    <%=@planet.description%>
+    <div class="container_infos" id="price">
+      <small>Prix : </small>
+     <small class="donnees"><%=@planet.prix%> CR</small>
+    </div>
+  </div>
   <div class="proprietaire" id="infos_proprio">
-    <div class="avatar_proprio"><%=cl_image_tag @planet.user.photo.key%></div>
-    <div class="container_infos">
-      <h3>Propriétaire : </h3>
-      <h3 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h3>
+    <div class="avatar_proprio"><%=cl_image_tag @planet.user.photo.key, height: 200, width: 180, :crop => :fill, :radius=>"max", :gravity=>"faces" %></div>
+    <div class="container_infos" id="container_proprio">
+      <h4>Propriétaire : </h4>
+      <h4 class="donnees"><%=@planet.user['first_name']%> <%=@planet.user['last_name']%></h4>
     </div>
     <div class="biography"><%=@planet.user['biographie']%></div>
   </div>
-
-  <div class="container_infos">
-    <h3>Prix : </h3>
-    <h3 class="donnees"><%=@planet.prix%> CR</h3>
-  </div>
 </div>
+
 
 <div class="bottom_view">
   <%= link_to "Home", root_path, class: "btn btn-flat" %>
