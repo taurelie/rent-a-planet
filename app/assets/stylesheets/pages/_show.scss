@@ -19,11 +19,15 @@
   background-color: white;
   text-align: justify;
   padding: 20px;
+  margin-left: 25px;
+  margin-right: 10px;
 }
 
 .proprietaire {
-  max-width: 400px;
+  max-width: 700px;
   vertical-align: middle;
+  background-color: white;
+  padding: 20px;
 }
 
 .bottom_view {
@@ -32,7 +36,24 @@
   justify-content: space-between;
 }
 
-#info_proprio {
-  display: flex;
+.biography {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+#price {
+  position: relative;
+  top: 300px;
+}
+
+#description_planete {
+  width: 500px;
+}
+
+#container_proprio {
+  width: 400px;
   justify-content: center;
+  vertical-align: middle;
+  position: relative;
 }
