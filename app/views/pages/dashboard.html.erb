@@ -21,6 +21,7 @@
     <div class="user_infos">
       <h5>Ma biographie</h5>
       <div class="container_infos"><%= @user.biographie %></div>
+      <div class="container"><%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill %></div>
     </div>
 <!--boutton editer -->
     <div>
