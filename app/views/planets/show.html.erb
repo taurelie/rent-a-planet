@@ -15,7 +15,11 @@
   </div>
 </div>
 <div class="informations_planetes">
+<<<<<<< HEAD
   <div class="planet" id="planet_show"><%=cl_image_tag @planet.photo.key%></div>
+=======
+  <div class="planet" id="planet_show"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Coruscant.jpg" alt=""></div>
+>>>>>>> master
   <div class="description"><%=@planet.description%></div>
 </div>
 
@@ -36,5 +40,6 @@
 </div>
 
 <div class="bottom_view">
-  <%= link_to "Réserver", "#", class: "btn btn-flat" %>
+  <%= link_to "Home", planets_path, class: "btn btn-flat" %>
+  <%= link_to "Spaceport", spaceport_path, class: "btn btn-flat" %>
 </div>
