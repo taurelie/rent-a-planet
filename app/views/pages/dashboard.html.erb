@@ -35,15 +35,17 @@
             <div class="container_infos">
               <div class="container_links">
                 <%= link_to planet_path(planet) do %>
-
-                  <%= planet.name %>
+                  <div><%=cl_image_tag planet.photo.key, height: 40, weight:40, :crop => :fill %></div>
+                  <div id="planet_name_dash"><%= planet.name %></div>
                 <%end%>
               </div>
-              <div class="container_links">
+              <div class="edit_suppr">
+                <div class="container_links">
                 <%= link_to "Editer", edit_planet_path(planet) %>
-              </div>
-              <div class="container_links">
+                </div>
+                <div class="container_links">
                 <%= link_to "Supprimer", planet_path(planet), method: :delete %>
+                </div>
               </div>
             </div>
           <% end %>
@@ -55,6 +57,7 @@
         <% @current_user.locations.each do |location|%>
           <div class="container_infos">
             <div class="container_links">
+              <div class="container_links"><%=cl_image_tag location.planet.photo.key, height: 40, weight:40, :crop => :fill %></div>
               <%= location.planet['name'] %>
             </div>
           </div>
