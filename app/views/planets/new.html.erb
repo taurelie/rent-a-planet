@@ -1,11 +1,15 @@
-<h3>Ajouter une planète à louer</h3>
-
-<%= simple_form_for(@planet) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :planet_type, collection: Planet::TYPEPLANET %>
-  <%= f.input :safety, collection: Planet::SAFETYPLANET %>
-  <%= f.input :description %>
-  <%= f.input :prix %>
-  <%= f.input :localisation, collection: Planet::LOCALISATIONPLANET %>
-  <%= f.button :submit %>
-<% end %>
+<div class="contenaire_form">
+  <div class="form">
+    <h3>Ajouter une planète à louer</h3>
+    <%= simple_form_for(@planet) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :planet_type, collection: Planet::TYPEPLANET %>
+      <%= f.input :safety, collection: Planet::SAFETYPLANET %>
+      <%= f.input :description %>
+      <%= f.input :prix %>
+      <%= f.input :localisation, collection: Planet::LOCALISATIONPLANET %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

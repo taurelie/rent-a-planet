@@ -8,10 +8,6 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 
 import { initMapbox } from '../plugins/init_mapbox';
-
-document.addEventListener('turbolinks:load', () => {
-  initMapbox();
-})
 import "channels"
 
 Rails.start()
@@ -33,4 +29,6 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initMapbox();
+
 });
