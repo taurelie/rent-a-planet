@@ -15,7 +15,7 @@
   </div>
 </div>
 <div class="informations_planetes">
-  <img class="planet" id="planet_show" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Coruscant.jpg/280px-Coruscant.jpg">
+  <div class="planet" id="planet_show"><%cl_image_tag @planet.photo.key%></div>
   <div class="description"><%=@planet.description%></div>
 </div>
 
