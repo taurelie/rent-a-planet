@@ -15,7 +15,7 @@
   </div>
 </div>
 <div class="informations_planetes">
-  <div class="planet" id="planet_show"><%cl_image_tag @planet.photo.key%></div>
+  <div class="planet" id="planet_show"><%=cl_image_tag @planet.photo.key%></div>
   <div class="description"><%=@planet.description%></div>
 </div>
 
@@ -38,3 +38,5 @@
 <div class="bottom_view">
   <%= link_to "Réserver", "#", class: "btn btn-flat" %>
 </div>
+
+<%console%>
